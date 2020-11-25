@@ -1,5 +1,10 @@
 <h1>プロフィール</h1>
-
+<h3>アバター</h3>
+<div style="widht:200px;height:auto;">
+　<% if current_user.avatar.attached? %>
+    <%= image_tag current_user.avatar, class: "card-img",style:"widht:100%!important" %>
+  <% end %>
+</div>
 <h3>名前 <%= @user.name %></h3>
 <h3>年齢 <%= @user.age %></h3>
 <h3>メールアドレス <%= @user.email %> </h3>
